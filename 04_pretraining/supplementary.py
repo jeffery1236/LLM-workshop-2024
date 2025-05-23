@@ -40,7 +40,7 @@ def create_dataloader_v1(txt, batch_size=4, max_length=256,
 
     # Create dataset
     dataset = GPTDatasetV1(txt, tokenizer, max_length, stride)
-
+    print(len(dataset))
     # Create dataloader
     dataloader = DataLoader(
         dataset, batch_size=batch_size, shuffle=shuffle, drop_last=drop_last, num_workers=num_workers)
